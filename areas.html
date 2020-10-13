@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var figura = prompt("Ingrese figura a calcular").toLowerCase();
+
+        switch (figura) {
+            case 'cuadrado':
+                do {
+                    var lado = parseInt(prompt("Ingrese longitud lado"));
+                    if (isNaN(lado)) {
+                        alert("Ingrese un numero valido");
+                    }
+                } while (isNaN(lado))
+
+                var area = lado * lado;
+                console.log("El area del cuadrado es " + area);
+                break;
+
+            case 'rectangulo':
+                do {
+                    var lado1 = parseInt(prompt("Ingrese longitud lado 1"));
+                    var lado2 = parseInt(prompt("Ingrese longitud lado 2"));
+                    if (isNaN(lado1) || isNaN(lado2)) {
+                        alert("Ingrese un numero valido");
+                    }
+                } while (isNaN(lado1) || isNaN(lado2))
+
+                var area = lado1 * lado2;
+                console.log("El area del rectagulo es " + area);
+                break;
+
+            case 'cubo':
+                do {
+                    var lado = parseInt(prompt("Ingrese longitud lado"));
+                    if (isNaN(lado)) {
+                        alert("Ingrese un numero valido");
+                    }
+                } while (isNaN(lado))
+
+                var area = 6 * Math.pow(lado, 2);
+                console.log("El area del cubo es " + area);
+                break;
+
+            case 'caja':
+                do {
+                    var ancho = parseInt(prompt("Ingrese ancho de caja"));
+                    var largo = parseInt(prompt("Ingrese largo de caja"));
+                    var alto = parseInt(prompt("Ingrese alto de caja"));
+                    if (isNaN(ancho) || isNaN(largo) || isNaN(alto)) {
+                        alert("Ingrese un numero valido");
+                    }
+                } while (isNaN(ancho) || isNaN(largo) || isNaN(alto))
+
+                var area = 2 * (ancho * largo + largo * alto + ancho * alto);
+                console.log("El area de la caja es " + area);
+                break;
+
+            default:
+                alert("ingrese una figura valida");
+                break;
+
+        }   
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

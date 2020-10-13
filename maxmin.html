@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var numeros = [];
+
+
+        do {
+            x = parseInt(prompt("Ingrese numeros entre 1 y 1000, ingrese 0 para terminar"));
+            if (isNaN(x) || x < 0 || x > 1000) {
+                alert("Ingrese un numero valido")
+            }
+            else if (x != 0) {
+                numeros.push(x);
+            }
+
+        } while (x != 0)
+        console.log(numeros);
+        max(numeros);
+        min(numeros);
+        prom(numeros);
+        function max(array) {
+            var max = array[0];
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+            }
+            console.log("El valor maximo es " + max);
+        }
+        function min(array) {
+            var min = array[0];
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+            console.log("El valor minimo es " + min);
+        }
+        function prom(array) {
+            var suma = 0;
+            var cantvalores = array.length;
+            for (var i = 0; i < array.length; i++) {
+                suma += array[i];
+            }
+            var prom = suma / cantvalores;
+            console.log("El promedio es " + prom);
+        }
+
+    </script>   
+</head>
+
+<body>
+
+</body>
+
+</html>

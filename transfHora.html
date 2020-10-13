@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // do {
+        //     var hora = prompt("Ingrese la hora entre 00 y 23");
+        //     if (hora > 23 || hora < 0) {
+        //         alert("Hora invalida");
+        //     }
+        // } while (hora > 23 || hora < 0);
+        // do {
+        //     var minutos = prompt("Ingrese los minutos entre 00 y 59");
+        //     if (minutos > 59 || minutos < 0) {
+        //         alert("Minutos invalidos");
+        //     }
+        // } while (minutos > 59 || minutos < 0);
+        do {
+            var hora = prompt("Ingrese hora en este formato ej: 23:50 ");
+            var horas = parseInt(hora.substring(0, 2));
+            var dospuntos = hora.substring(2, 3);
+            var minutos = parseInt(hora.substr(3, 2));
+            if (horas > 23 || minutos > 59 || dospuntos != ":") {
+                alert("Formato invalido de hora");
+            }
+        } while (horas > 23 || minutos > 59 || dospuntos != ":")
+
+
+
+        
+        if (horas < 12) {
+            console.log(hora + " AM")
+        }
+        else {
+            console.log(horas % 12 + ':' + minutos + " PM");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

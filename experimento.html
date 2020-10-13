@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        do {
+            var hora = prompt("Ingrese hora en este formato ej: 23:50:32 ");
+            var horas = parseInt(hora.substring(0, 2));
+            var dospuntos1 = hora.substring(2, 3);
+            var minutos = parseInt(hora.substr(3, 2));
+            var dospuntos2 = hora.substring(5, 6);
+            var segundos = parseInt(hora.substr(6, 2));
+            if (horas > 23 || minutos > 59 || segundos > 59 || dospuntos1 != ":" || dospuntos2 != ":") {
+                alert("Formato invalido de hora");
+            }
+        } while (horas > 23 || minutos > 59 || segundos > 59 || dospuntos1 != ":" || dospuntos2 != ":")
+
+        do {
+            var duracion = parseInt(prompt("Ingrese duracion del proyecto en segundos"));
+            if (isNaN(duracion)) {
+                alert("Ingrese un numero valido");
+            }
+        } while (isNaN(duracion))
+
+        experimiento(horas, minutos, segundos, duracion);
+
+        function experimiento(hour, minutes, sec, duration) {
+            var fecha = new Date();
+            fecha.setHours(hour, minutes, sec);
+            fecha.setSeconds(sec + duration);
+
+            var resultadoHora = fecha.getHours(); 
+            var resultadoMin = fecha.getMinutes(); 
+            var resultadoSeg = fecha.getSeconds(); 
+            console.log(resultadoHora + ":" + resultadoMin + ":" + resultadoSeg);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

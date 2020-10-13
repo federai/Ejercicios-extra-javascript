@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        var palabra= prompt("Ingrese una palabra");
+        var numero = parseInt(prompt("Ingrese un numero positivo"));
+        
+        if (numero>palabra.length || numero<=0){
+            console.log("El numero ingresado supera a la longitud de la palabra");
+        }
+        else {
+             palabra=palabra.substring(0,numero-1) + "X" + palabra.substring(numero);
+             console.log(palabra);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

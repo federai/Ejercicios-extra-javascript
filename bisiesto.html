@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var numero = parseInt(prompt("Ingrese año"));
+        
+        if (isNaN(numero)){
+            alert("Ingrese un numero de año valido");
+            var numero = parseInt(prompt("Ingrese año"));
+        }
+
+        if (numero % 100 == 0 && numero % 400 ==0){
+            console.log("Año bisiesto");
+        }
+        else if (numero % 4 == 0){
+            console.log("Año bisiesto");
+        }
+        else{
+            console.log("No es bisiesto");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
